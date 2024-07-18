@@ -28,15 +28,20 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
+build-win/
+build-mac/
+build-linux/
 !**/src/main/**/build/
 !**/src/test/**/build/
+!**/src/main/**/build-win/
+!**/src/test/**/build-win/
+!**/src/main/**/build-mac/
+!**/src/test/**/build-mac/
+!**/src/main/**/build-linux/
+!**/src/test/**/build-linux/
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
-build/
-build-linux/
-build-win/
-build-mac/
