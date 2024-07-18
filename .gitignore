@@ -36,7 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/build/
-/build-linux/
-/build-win/
-/build-mac/
+build/
+build-linux/
+build-win/
+build-mac/
