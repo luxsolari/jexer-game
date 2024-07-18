@@ -4,17 +4,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.luxsolari</groupId>
-    <artifactId>java-packageable-base</artifactId>
+    <artifactId>jexer-game</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <artifact.mainClass>net.luxsolari.Main</artifact.mainClass>
     </properties>
 
     <dependencies>
         <!-- Add your dependencies here -->
+        <dependency>
+            <groupId>com.gitlab.klamonte</groupId>
+            <artifactId>jexer</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.lanterna</groupId>
+            <artifactId>lanterna</artifactId>
+            <version>3.1.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,7 +56,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>net.luxsolari.Main</mainClass> <!-- Replace with your main class -->
+                                    <mainClass>${artifact.mainClass}</mainClass> <!-- Replace with your main class -->
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -129,7 +140,7 @@
                                         <argument>--main-jar</argument>
                                         <argument>${project.build.finalName}-jar-with-dependencies.jar</argument>
                                         <argument>--main-class</argument>
-                                        <argument>net.luxsolari.Main</argument> <!-- Replace with your main class -->
+                                        <argument>${artifact.mainClass}</argument> <!-- Replace with your main class -->
                                         <argument>--type</argument>
                                         <argument>app-image</argument>
                                         <argument>--java-options</argument>
@@ -169,7 +180,7 @@
                                         <argument>--main-jar</argument>
                                         <argument>${project.build.finalName}-jar-with-dependencies.jar</argument>
                                         <argument>--main-class</argument>
-                                        <argument>net.luxsolari.Main</argument> <!-- Replace with your main class -->
+                                        <argument>${artifact.mainClass}</argument> <!-- Replace with your main class -->
                                         <argument>--type</argument>
                                         <argument>pkg</argument>
                                         <argument>--java-options</argument>
@@ -208,7 +219,7 @@
                                         <argument>--main-jar</argument>
                                         <argument>${project.build.finalName}-jar-with-dependencies.jar</argument>
                                         <argument>--main-class</argument>
-                                        <argument>net.luxsolari.Main</argument> <!-- Replace with your main class -->
+                                        <argument>${artifact.mainClass}</argument> <!-- Replace with your main class -->
                                         <argument>--type</argument>
                                         <argument>app-image</argument>
                                         <argument>--java-options</argument>
@@ -250,12 +261,11 @@
                                         <argument>--main-jar</argument>
                                         <argument>${project.build.finalName}-jar-with-dependencies.jar</argument>
                                         <argument>--main-class</argument>
-                                        <argument>net.luxsolari.Main</argument> <!-- Replace with your main class -->
+                                        <argument>${artifact.mainClass}</argument> <!-- Replace with your main class -->
                                         <argument>--type</argument>
                                         <argument>app-image</argument>
                                         <argument>--java-options</argument>
                                         <argument>--enable-preview</argument>
-                                        <argument>--win-console</argument>
                                     </arguments>
                                 </configuration>
                             </execution>
